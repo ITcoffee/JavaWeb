@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM</title>
+<style type="text/css">
+	.style1 {background-color: Green;}
+</style>
+<script type="text/javascript">
+	function changeDIV() {
+		var dom = document.getElementById("div1");
+		dom.innerHTML="这里你做主！"
+		dom.className="style1";
+	}
+</script>
+</head>
+<body>
+	<div id="div1">这里我做主！</div>
+	<input type="button" id="btn1" value="提交" onclick="changeDIV()">
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>创建IE的XMLHttpRequest</title>
+<script type="text/javascript">
+	// 创建异步调用对象
+	//var xmlhttp = new ActiveXObject("Micorsoft.XMLHTTP");	// IE
+	var xmlhttp = new XMLHttpRequest();	// Firefox
+	function testxhr() {
+		// 当对象状态发生改变时要执行的方法
+		xmlhttp.onreadystatechange = stateResult();
+		xmlhttp.open("GET", "http://www.baidu.com", true);
+		xmlhttp.send("haha");
+	}
+	function stateResult() {
+		if (xmlhttp.readystate == 4) {
+			if (xmlhttp.status == 200) {
+				document.write(xmlhttp.statustext);
+			}
+		}
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="提交" onclick="testxhr()">
+</body>
+</html>
