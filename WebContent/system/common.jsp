@@ -6,12 +6,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script type="text/javascript" src="${baseName }/js/jQuery/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="<%=request.getContextPath() %>/js/jQuery/jquery-2.2.0.min.js"></script>
 </head>
 <body>
 	<c:set var="basePath" value='<%=request.getSession().getServletContext().getRealPath("/") %>'></c:set>
 	<c:set var="baseName" value='<%=request.getContextPath() %>'></c:set>
-	
+	haha
 	<input type="hidden" id="baePath" value="${basePath }">
 	<input type="hidden" id="baseName" value="${baseName }">
 </body>
